@@ -1,0 +1,263 @@
+/* Resetar configurações */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos Gerais */
+body {
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+/* Container Geral */
+.container {
+  /* border: 2px solid aqua; */
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  /* border: 2px solid black; */
+  box-shadow: 1px 1px 10px #aaa;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+
+/* Header Logo */
+.header__logo {
+  /* border: 2px solid red; */
+  display: flex;
+}
+
+.header__logo img {
+  /* border: 2px solid magenta; */
+  width: 60px;
+  margin-right: 5px;
+}
+
+.header__text {
+  /* border: 2px solid blue; */
+  color: #aaa;
+  font-size: 0.7rem;
+}
+
+/* SECTION */
+
+/* Section Hero */
+.hero {
+  margin-top: 10px;
+}
+
+.hero .container {
+  height: 400px;
+  max-width: 960px;
+  /* width: 100%; */
+  background: url(../img/image-02.jpg) no-repeat center center;
+  background-size: cover;
+
+  box-shadow: 1px 1px 5px #000;
+}
+
+/* Section Sales */
+.sales {
+  margin-top: 40px;
+}
+
+.sales .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* padding: 10px; */
+}
+
+@media (min-width: 1200px) {
+  .sales .container {
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+  }
+}
+
+.sales__card {
+  /* border: 4px solid red; */
+  width: 300px;
+  margin: 0 10px;
+  box-shadow: 1px 1px 5px #000;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.card__image {
+  /* border: 4px solid blue; */
+  width: 100%;
+  /* border-radius: 10px; */
+  display: flex;
+}
+
+.card__image img {
+  height: 170px;
+  width: 100%;
+}
+
+.card__info {
+  padding: 30px;
+  background: #eee;
+}
+
+.card__info p {
+  color: #555;
+  font-size: 0.7rem;
+}
+
+.project__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.info__price {
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.info__status {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 3px 15px;
+}
+
+.status-new {
+  background: #51d275;
+}
+
+.status-sale {
+  background: #dc9730;
+}
+
+/* Section Styles */
+/* .styles {
+  border: 4px solid red;
+} */
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.card:first-child h2 {
+  color: #888;
+  text-shadow: none;
+}
+
+.card h2 {
+  color: #fff;
+  font-size: 28px;
+  text-shadow: 1px 1px 1px #aaa;
+  z-index: 2;
+}
+
+/* Primeiro elemento */
+.card + div {
+  box-shadow: 1px 1px 5px #000;
+}
+
+.style-1 {
+  background: #fff;
+  /* background-size: cover; */
+}
+
+.style-2 {
+  background: url('../img/industrial.png') no-repeat center left;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  /* z-index: -999; */
+}
+
+.style-2::before {
+  border-radius: 3px;
+  content: '';
+  position: absolute;
+  background: url('../img/industrial.png') no-repeat center left;
+  filter: sepia(0%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: 1;
+  transition: filter 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.style-3 {
+  background: url('../img/moderno.png') no-repeat center left;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.style-3::before {
+  border-radius: 3px;
+  content: '';
+  position: absolute;
+  background: url('../img/moderno.png') no-repeat center left;
+  filter: sepia(0%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: 1;
+  transition: filter 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.style-4 {
+  background: url('../img/classico.png') no-repeat center left;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.style-4::before {
+  border-radius: 3px;
+  content: '';
+  position: absolute;
+  background: url('../img/classico.png') no-repeat center left;
+  filter: sepia(0%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  z-index: 1;
+  transition: filter 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.style-2:hover::before,
+.style-3:hover::before,
+.style-4:hover::before {
+  filter: sepia(50%);
+  transform: scale(1.01);
+}
