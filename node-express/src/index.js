@@ -52,11 +52,13 @@ app.put('/clientes/:id', (request, response) => {
   const { nome, email, endereco, compra } = request.body;
 
   const findClient = clientes.find(cliente => cliente.id === id);
-
-  if (!findClient) {
+  
+  // Se não encontrar o ideal especificado, retorna uma mensagem de erro.
+  if(!findClient) {
     return response.json({ mensagem: 'Cliente não encontrado' });
   }
-
+  
+  // Caso contrário, poderemos alterar as informações.
   findClient.nome = nome;
   findClient.email = email;
   findClient.endereco = endereco;
