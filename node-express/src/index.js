@@ -53,7 +53,7 @@ app.put('/clientes/:id', (request, response) => {
 
   const findClient = clientes.find(cliente => cliente.id === id);
   
-  // Se não encontrar o ideal especificado, retorna uma mensagem de erro.
+  // Se não encontrar o ID especificado, retorna uma mensagem de erro.
   if(!findClient) {
     return response.json({ mensagem: 'Cliente não encontrado' });
   }
